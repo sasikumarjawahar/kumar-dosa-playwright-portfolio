@@ -21,7 +21,7 @@ test('keeps menu and ordering controls usable on a mobile viewport', async ({ pa
   await expect(page.getByRole('heading', { name: 'Dosa, your way' })).toBeVisible();
   await expect(page.locator('.menu-item')).toHaveCount(5);
   await expect(page.getByLabel('Your name')).toBeVisible();
-  await expect(page.getByRole('button', { name: /place my order/i })).toBeVisible();
+  await expect(page.locator('#place-order-btn')).toBeVisible();
 
   const pageWidth = await page.evaluate(() => document.documentElement.scrollWidth);
   expect(pageWidth).toBeLessThanOrEqual(375);

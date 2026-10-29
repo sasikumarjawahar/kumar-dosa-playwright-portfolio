@@ -4,7 +4,7 @@ const demoUsername = 'dosa.staff';
 const demoPassword = 'tawa-demo';
 
 test('shows a validation message for invalid demo credentials', async ({ page }) => {
-  await page.goto('/login');
+  await page.goto('/login.html');
   await page.getByLabel('Username').fill('invalid-user');
   await page.getByLabel('Password').fill('invalid-password');
   await page.getByRole('button', { name: 'Sign in' }).click();
@@ -14,7 +14,7 @@ test('shows a validation message for invalid demo credentials', async ({ page })
 });
 
 test('opens the demo dashboard and signs out', async ({ page }) => {
-  await page.goto('/login');
+  await page.goto('/login.html');
   await page.getByLabel('Username').fill(demoUsername);
   await page.getByLabel('Password').fill(demoPassword);
   await page.getByRole('button', { name: 'Sign in' }).click();
