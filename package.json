@@ -1,0 +1,14 @@
+{
+  "name": "kumar-dosa-playwright-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone Playwright E2E strategy and tests for Kumar's Dosa House",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
